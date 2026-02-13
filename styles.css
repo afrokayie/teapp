@@ -182,6 +182,15 @@ body {
     filter: drop-shadow(0 4px 8px var(--shadow));
 }
 
+.character-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--white);
+    box-shadow: 0 6px 18px var(--shadow);
+}
+
 .character h3 {
     font-family: var(--font-special);
     font-size: 2rem;

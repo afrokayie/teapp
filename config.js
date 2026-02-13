@@ -3,31 +3,38 @@
 
 const CONFIG = {
     // Partner's name (will be used throughout the website)
-    partnerName: "Your Love's Name",
+    partnerName: "My Sweet Cup of Tea",
     
     // Your name (optional, for signature)
-    yourName: "Your Name",
+    yourName: "Kayie",
     
     // Custom messages
     messages: {
         subtitle: "you light up my world in ways words can't express ✨",
-        loveNote: "you are the sunshine in my darkest days and the stars in my night sky. Every moment with you feels like magic, and I fall in love with you more each day. You're not just my girlfriend, you're my best friend, my soulmate, and my everything. I love you beyond words! 💖",
-        specialMessage: "You came into my life like a beautiful surprise, and now I can't imagine my world without you. Your smile brightens my darkest days, your laugh is my favorite melody, and your love is the greatest gift I've ever received.",
-        specialMessage2: "Thank you for being you, for loving me, and for making every day feel like a celebration. I promise to love you, cherish you, and make you smile every single day of our lives together.",
-        signature: "With all my love, Forever yours 💕"
+        loveNote: "you are the reason I make hay while the sun shines. Every moment with you feels like magic, and I fall in love with you more each day. You're my best friend, my soulmate, and my everything. I love you more than words can describe.",
+        specialMessage: "I've heard this should be rhetoric but godforbid I take anything for granted with you, my love.",
+        specialMessage2: "I've got one question. Just one that I'll keep asking till we're old and brittle. I bet your pretty ass can guess it.",
+        signature: "Will you be my valentine? 💕"
     },
     
     // Memory descriptions
     memories: {
-        lateNight: "Those endless conversations that made us forget about time",
-        firstMeeting: "I know the day we meet will be magical and unforgettable",
-        care: "Your caring nature, sweet voice, and adorable cuteness"
+        lateNight: "Those late night walks are some of the most enjoyable snippets of my life because I did them with you",
+        firstMeeting: "I remember how magical it felt when I saw you walked through that door, dec 22, 2021.",
+        care: "Your caring nature, your tough, yet sweet voice, and adorable cuteness"
     },
     
     // Character descriptions
     characters: {
         partner: "My beautiful angel",
         you: "Forever yours"
+    },
+
+    // Optional profile photos for the two top cards
+    // Put files in /public/images/ and set paths like "/images/your-file.jpg"
+    images: {
+        partner: "/images/my-sweet-cup-of-tea.jpg",
+        you: "/images/kayie.jpg"
     },
     
     // Special messages for different kiss counts
@@ -45,9 +52,9 @@ const CONFIG = {
     
     // Memory effect messages
     memoryMessages: {
-        lateNight: "Those late nights talking with you are my favorite memories 🌙✨",
-        firstMeeting: "I know the day we meet will be magical and unforgettable 💫💕",
-        care: "Your caring nature, sweet voice, and adorable cuteness melt my heart 💕😍"
+        lateNight: "Those late night walks are some of the most enjoyable snippets of my life because I did them with you",
+        firstMeeting: "I remember how magical it felt when I saw you walked through that door, dec 22, 2021.",
+        care: "Your caring nature, your tough, yet sweet voice, and adorable cuteness"
     }
 };
 

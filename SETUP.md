@@ -41,11 +41,11 @@
 ### Example Config
 ```javascript
 const CONFIG = {
-    partnerName: "Emma",
-    yourName: "James",
+    partnerName: "Tea",
+    yourName: "Kayie",
     messages: {
         subtitle: "you make every day brighter just by being in it ✨",
-        loveNote: "Emma, you are my everything. Every moment with you is a gift...",
+        loveNote: "Tea, you are my everything. Every moment with you is a gift...",
         // ... more messages
     }
 };

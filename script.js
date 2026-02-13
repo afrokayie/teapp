@@ -31,6 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
             if (yourDescription) {
                 yourDescription.textContent = CONFIG.characters.you;
             }
+
+            // Optionally replace SVG avatars with custom photos
+            const partnerAvatar = document.querySelector('#partner .character-avatar');
+            if (partnerAvatar && CONFIG.images && CONFIG.images.partner) {
+                partnerAvatar.innerHTML = `<img src="${CONFIG.images.partner}" alt="${CONFIG.partnerName}" class="character-photo">`;
+                partnerAvatar.classList.add('has-image');
+            }
+
+            const yourAvatar = document.querySelector('#you .character-avatar');
+            if (yourAvatar && CONFIG.images && CONFIG.images.you) {
+                yourAvatar.innerHTML = `<img src="${CONFIG.images.you}" alt="${CONFIG.yourName}" class="character-photo">`;
+                yourAvatar.classList.add('has-image');
+            }
             
             // Update love note
             const loveNoteText = document.getElementById('loveNoteText');

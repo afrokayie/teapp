@@ -29,6 +29,13 @@ const CONFIG = {
         partner: "My beautiful angel",
         you: "Forever yours"
     },
+
+    // Optional profile photos for the two top cards
+    // Put files in /public/images/ and set paths like "/images/your-file.jpg"
+    images: {
+        partner: "",
+        you: ""
+    },
     
     // Special messages for different kiss counts
     kissMessages: {
