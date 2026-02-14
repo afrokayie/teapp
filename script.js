@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update partner name and description
             const partnerName = document.getElementById('partnerName');
             if (partnerName) {
-                partnerName.textContent = `${CONFIG.partnerName} 💕`;
+                partnerName.textContent = CONFIG.partnerName;
             }
             
             const partnerDescription = document.getElementById('partnerDescription');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update your name and description
             const yourName = document.getElementById('yourName');
             if (yourName) {
-                yourName.textContent = `${CONFIG.yourName} 💙`;
+                yourName.textContent = CONFIG.yourName;
             }
             
             const yourDescription = document.getElementById('yourDescription');
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create floating hearts
     function createHearts() {
         const heartsContainer = document.querySelector('.hearts-container');
-        const heartSymbols = ['💕', '💖', '💗', '💘', '💝', '💞', '💟', '💌', '💋', '❤️'];
+        const heartSymbols = ['•', '·', '◦', '◆', '◇', '✦'];
         
         for (let i = 0; i < 15; i++) {
             const heart = document.createElement('div');
@@ -118,14 +118,14 @@ document.addEventListener('DOMContentLoaded', function() {
     musicToggle.addEventListener('click', function() {
         if (isPlaying) {
             bgMusic.pause();
-            musicToggle.textContent = '🎵';
+            musicToggle.textContent = 'Music';
             isPlaying = false;
         } else {
             bgMusic.play().then(() => {
-                musicToggle.textContent = '🔊';
+                musicToggle.textContent = 'Pause';
                 isPlaying = true;
             }).catch(() => {
-                musicToggle.textContent = '❌';
+                musicToggle.textContent = 'Audio unavailable';
                 console.log('Music could not be played');
             });
         }
@@ -138,17 +138,17 @@ document.addEventListener('DOMContentLoaded', function() {
     loveButton.addEventListener('click', function() {
         loveNote.classList.toggle('visible');
         if (loveNote.classList.contains('visible')) {
-            loveButton.textContent = 'Hide My Love Note 💝';
+            loveButton.textContent = 'Hide note';
             createHeartBurst();
         } else {
-            loveButton.textContent = 'Click for a surprise 💝';
+            loveButton.textContent = 'Open a note';
         }
     });
 
     // Create heart burst effect
     function createHeartBurst() {
         const heartsContainer = document.querySelector('.hearts-container');
-        const burstHearts = ['💕', '💖', '💗', '💘', '💝', '💞'];
+        const burstHearts = ['•', '·', '◦', '◆', '◇', '✦'];
         
         for (let i = 0; i < 10; i++) {
             const heart = document.createElement('div');
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create kiss effect
     function createKissEffect() {
         const kissEffects = document.querySelector('.kiss-effects');
-        const kissSymbols = ['💋', '💕', '💖', '💗', '😘'];
+        const kissSymbols = ['◆', '◇', '•', '✦', '✧'];
         
         for (let i = 0; i < 5; i++) {
             const kiss = document.createElement('div');
@@ -220,16 +220,17 @@ document.addEventListener('DOMContentLoaded', function() {
         messageDiv.style.top = '50%';
         messageDiv.style.left = '50%';
         messageDiv.style.transform = 'translate(-50%, -50%)';
-        messageDiv.style.background = 'linear-gradient(135deg, #FF69B4, #FF1493)';
-        messageDiv.style.color = 'white';
+        messageDiv.style.background = 'rgba(255, 253, 249, 0.96)';
+        messageDiv.style.color = '#2e2723';
+        messageDiv.style.border = '1px solid #d9c9b5';
         messageDiv.style.padding = '1rem 2rem';
-        messageDiv.style.borderRadius = '2rem';
-        messageDiv.style.fontFamily = 'Great Vibes, cursive';
-        messageDiv.style.fontSize = '1.5rem';
+        messageDiv.style.borderRadius = '1rem';
+        messageDiv.style.fontFamily = 'Instrument Sans, sans-serif';
+        messageDiv.style.fontSize = '1.1rem';
         messageDiv.style.fontWeight = '600';
-        messageDiv.style.boxShadow = '0 10px 30px rgba(255, 105, 180, 0.4)';
+        messageDiv.style.boxShadow = '0 14px 30px rgba(35, 25, 20, 0.16)';
         messageDiv.style.zIndex = '10000';
-        messageDiv.style.animation = 'glow 2s ease-in-out infinite alternate';
+        messageDiv.style.letterSpacing = '0.01em';
         document.body.appendChild(messageDiv);
         
         setTimeout(() => {
@@ -257,15 +258,15 @@ document.addEventListener('DOMContentLoaded', function() {
             switch(type) {
                 case 'late-night':
                     createStars();
-                    showMemoryMessage(window.CONFIG.memoryMessages.lateNight || "Those late nights talking with you are my favorite memories 🌙✨");
+                    showMemoryMessage(window.CONFIG.memoryMessages.lateNight || "Those late nights talking with you are my favorite memories.");
                     break;
                 case 'first-meeting':
                     createSparkles();
-                    showMemoryMessage(window.CONFIG.memoryMessages.firstMeeting || "I know the day we meet will be magical and unforgettable 💫💕");
+                    showMemoryMessage(window.CONFIG.memoryMessages.firstMeeting || "I know the day we meet will be magical and unforgettable.");
                     break;
                 case 'care':
                     createHeartRain();
-                    showMemoryMessage(window.CONFIG.memoryMessages.care || "Your caring nature, sweet voice, and adorable cuteness melt my heart 💕😍");
+                    showMemoryMessage(window.CONFIG.memoryMessages.care || "Your caring nature and voice melt my heart.");
                     break;
             }
         }
@@ -277,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         for (let i = 0; i < 20; i++) {
             const star = document.createElement('div');
-            star.textContent = '✨';
+            star.textContent = '✦';
             star.style.position = 'absolute';
             star.style.left = Math.random() * 100 + '%';
             star.style.top = Math.random() * 100 + '%';
@@ -296,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create sparkle effect
     function createSparkles() {
         const heartsContainer = document.querySelector('.hearts-container');
-        const sparkles = ['✨', '⭐', '💫', '🌟'];
+        const sparkles = ['✦', '✧', '•', '◦'];
         
         for (let i = 0; i < 15; i++) {
             const sparkle = document.createElement('div');
@@ -318,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create heart rain effect
     function createHeartRain() {
         const heartsContainer = document.querySelector('.hearts-container');
-        const hearts = ['💕', '💖', '💗', '💘', '💝', '💞'];
+        const hearts = ['•', '·', '◆', '◇', '✦', '✧'];
         
         for (let i = 0; i < 25; i++) {
             setTimeout(() => {
@@ -359,14 +360,15 @@ document.addEventListener('DOMContentLoaded', function() {
         messageDiv.style.top = '20%';
         messageDiv.style.left = '50%';
         messageDiv.style.transform = 'translate(-50%, -50%)';
-        messageDiv.style.background = 'rgba(255, 255, 255, 0.95)';
-        messageDiv.style.color = '#FF1493';
+        messageDiv.style.background = 'rgba(255, 253, 249, 0.96)';
+        messageDiv.style.color = '#302925';
+        messageDiv.style.border = '1px solid #d8c9b7';
         messageDiv.style.padding = '1.5rem 2rem';
         messageDiv.style.borderRadius = '1rem';
-        messageDiv.style.fontFamily = 'Cormorant Garamond, serif';
-        messageDiv.style.fontSize = '1.3rem';
+        messageDiv.style.fontFamily = 'Instrument Sans, sans-serif';
+        messageDiv.style.fontSize = '1.06rem';
         messageDiv.style.fontWeight = '600';
-        messageDiv.style.boxShadow = '0 10px 30px rgba(255, 105, 180, 0.3)';
+        messageDiv.style.boxShadow = '0 14px 30px rgba(35, 25, 20, 0.16)';
         messageDiv.style.zIndex = '10000';
         messageDiv.style.textAlign = 'center';
         messageDiv.style.maxWidth = '90%';
@@ -390,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
         partnerCharacter.addEventListener('click', function() {
             const message = window.CONFIG && window.CONFIG.characterMessages && window.CONFIG.characterMessages.partner 
                 ? `${window.CONFIG.partnerName}, ${window.CONFIG.characterMessages.partner}`
-                : "You're the most beautiful person in the world! 💕";
+                : "You're the most beautiful person in the world.";
             showSpecialMessage(message);
             createHeartBurst();
         });
@@ -400,7 +402,7 @@ document.addEventListener('DOMContentLoaded', function() {
         youCharacter.addEventListener('click', function() {
             const message = window.CONFIG && window.CONFIG.characterMessages && window.CONFIG.characterMessages.you 
                 ? window.CONFIG.characterMessages.you
-                : "I'm so lucky to have you in my life! 💖";
+                : "I'm so lucky to have you in my life.";
             showSpecialMessage(message);
             createSparkles();
         });
@@ -409,11 +411,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize
     createHearts();
     
-    // Add some initial animations
-    setTimeout(() => {
-        document.querySelector('.main-title').style.animation = 'glow 2s ease-in-out infinite alternate';
-    }, 1000);
-
     // Auto-create some floating hearts periodically
     setInterval(() => {
         if (Math.random() > 0.7) {
